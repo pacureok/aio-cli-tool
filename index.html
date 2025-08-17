@@ -3,51 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Descarga AIO CLI Tool</title>
+    <title>AIO CLI Tool</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
+    <header class="header">
         <h1>AIO CLI Tool</h1>
-        <p>Gracias por tu interés en AIO CLI Tool. Aquí puedes descargar el instalador y aprender a usar la herramienta.</p>
+        <p>Una herramienta de línea de comandos todo en uno para tus proyectos.</p>
         <a href="aio_installer.exe" class="download-btn" download>Descargar AIO CLI Tool v1.0</a>
-    </div>
+    </header>
 
     <div class="content-section">
         <h2>Guía de Uso Rápido</h2>
-        <p>AIO CLI Tool es una herramienta de línea de comandos todo en uno. Aquí te mostramos cómo usar sus funciones principales desde la terminal.</p>
+        <p>AIO CLI Tool es una herramienta de línea de comandos para compilar y procesar tus archivos. Una vez instalado, puedes usar el comando <code>aio.exe</code> desde cualquier lugar de tu terminal.</p>
         
-        <h3>Cómo Funciona el Comando</h3>
-        <p>Una vez instalado, puedes usar el comando <code>aio.exe</code> desde cualquier lugar de tu terminal. Los comandos básicos son:</p>
+        <h3>Comandos Básicos</h3>
         <ul>
             <li>**<code>aio.exe --help</code>**: Muestra todos los comandos y opciones disponibles.</li>
-            <li>**<code>aio.exe build [archivo]</code>**: Compila un archivo <code>.aio</code> en un formato ejecutable.</li>
-            <li>**<code>aio.exe process [archivo]</code>**: Procesa un archivo de idioma o metadatos para su uso.</li>
+            <li>**<code>aio.exe build [archivo]</code>**: Compila un archivo <code>.aio</code>.</li>
+            <li>**<code>aio.exe process [archivo]</code>**: Procesa un archivo de idioma o metadatos.</li>
         </ul>
 
-        <h3>Archivos y su Uso</h3>
-        <p>AIO CLI Tool asocia varios tipos de archivos a su funcionalidad. Cada extensión de archivo tiene un propósito específico:</p>
+        <h3>Tipos de Archivos y sus Usos</h3>
+        <p>AIO CLI Tool asocia varios tipos de archivos a su funcionalidad. Cada extensión tiene un propósito específico:</p>
         
         <h4>Archivos <code>.aio</code></h4>
-        <p>Estos archivos son el núcleo de la herramienta. Contienen código fuente que se compila para crear un ejecutable. Su ícono de archivo está asociado a la función de **construcción**.</p>
+        <p>Son el núcleo de la herramienta. Contienen el código fuente del proyecto y están asociados a la función de **construcción (build)**.</p>
         <div class="code-block">
             <pre><code>
-; Ejemplo de código dentro de un archivo .aio
-; Define un nuevo proyecto
+; Ejemplo de un archivo .aio
 Project: MiAplicacion
 Version: 1.0
-
-; Agrega archivos fuente
 Source: main.go
-Source: utils.go
-
-; Configura las dependencias
+Source: data.rs
 Dependencies:
     - github.com/ejemplo/libreria
             </code></pre>
         </div>
-        <p>Para compilarlo, usa el comando:</p>
+        <p>Para compilarlo desde la terminal:</p>
         <div class="code-block">
             <pre><code>
 aio.exe build "C:\ruta\a\MiAplicacion.aio"
@@ -55,44 +49,28 @@ aio.exe build "C:\ruta\a\MiAplicacion.aio"
         </div>
 
         <h4>Archivos <code>.esp</code> e <code>.ing</code></h4>
-        <p>Estos archivos contienen datos para la traducción a español e inglés, respectivamente. El ícono de cada archivo está asociado a la función de **procesamiento**.</p>
+        <p>Contienen datos de traducción a español e inglés. Están asociados a la función de **procesamiento**.</p>
         <div class="code-block">
             <pre><code>
 ; Ejemplo de un archivo .esp
-welcome_message=Bienvenido a AIO
+welcome_message=Bienvenido
 error_message=Ha ocurrido un error
-            </code></pre>
-        </div>
-        <p>Para procesar el archivo, usa el comando:</p>
-        <div class="code-block">
-            <pre><code>
-aio.exe process "C:\ruta\a\textos_espanol.esp"
             </code></pre>
         </div>
 
         <h4>Archivos <code>.meta</code></h4>
-        <p>Estos archivos almacenan metadatos para tu proyecto, como información de autor o versión. Su ícono de archivo está asociado a la función de **procesamiento**.</p>
+        <p>Almacenan metadatos del proyecto, como información de autor. También asociados a la función de **procesamiento**.</p>
         <div class="code-block">
             <pre><code>
 ; Ejemplo de un archivo .meta
-Author: Juan Perez
-Date: 2024-08-17
-Description: Herramienta de línea de comandos para proyectos AIO.
+Author: Tu Nombre
+Date: 2025-08-17
+Description: Herramienta de línea de comandos.
             </code></pre>
         </div>
-
-        <h4>Archivos <code>.crea</code>, <code>.go</code> y <code>.rs</code></h4>
-        <p>Estos son los archivos de código fuente que se usarán en tu proyecto. Los íconos se asocian a la función de **procesamiento**.</p>
-        <div class="code-block">
-            <pre><code>
-// Ejemplo de un archivo .crea
-function init_project() {
-    // Código para inicializar un nuevo proyecto
-}
-            </code></pre>
-        </div>
+        
+        <h4>Archivos de Código Fuente (`.crea`, `.go`, `.rs`)</h4>
+        <p>Son los archivos de código fuente que se usarán en tu proyecto y están asociados a la función de **procesamiento**.</p>
     </div>
-
-    <script src="script.js"></script>
 </body>
 </html>
