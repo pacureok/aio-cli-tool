@@ -10,8 +10,87 @@
 
     <div class="container">
         <h1>AIO CLI Tool</h1>
-        <p>Gracias por tu interés en AIO CLI Tool. Haz clic en el botón para descargar el instalador de la versión 1.0.</p>
-        <a href="aio_installer.exe" class="download-btn" download>Descargar Ahora</a>
+        <p>Gracias por tu interés en AIO CLI Tool. Aquí puedes descargar el instalador y aprender a usar la herramienta.</p>
+        <a href="aio_installer.exe" class="download-btn" download>Descargar AIO CLI Tool v1.0</a>
+    </div>
+
+    <div class="content-section">
+        <h2>Guía de Uso Rápido</h2>
+        <p>AIO CLI Tool es una herramienta de línea de comandos todo en uno. Aquí te mostramos cómo usar sus funciones principales desde la terminal.</p>
+        
+        <h3>Cómo Funciona el Comando</h3>
+        <p>Una vez instalado, puedes usar el comando <code>aio.exe</code> desde cualquier lugar de tu terminal. Los comandos básicos son:</p>
+        <ul>
+            <li>**<code>aio.exe --help</code>**: Muestra todos los comandos y opciones disponibles.</li>
+            <li>**<code>aio.exe build [archivo]</code>**: Compila un archivo <code>.aio</code> en un formato ejecutable.</li>
+            <li>**<code>aio.exe process [archivo]</code>**: Procesa un archivo de idioma o metadatos para su uso.</li>
+        </ul>
+
+        <h3>Archivos y su Uso</h3>
+        <p>AIO CLI Tool asocia varios tipos de archivos a su funcionalidad. Cada extensión de archivo tiene un propósito específico:</p>
+        
+        <h4>Archivos <code>.aio</code></h4>
+        <p>Estos archivos son el núcleo de la herramienta. Contienen código fuente que se compila para crear un ejecutable. Su ícono de archivo está asociado a la función de **construcción**.</p>
+        <div class="code-block">
+            <pre><code>
+; Ejemplo de código dentro de un archivo .aio
+; Define un nuevo proyecto
+Project: MiAplicacion
+Version: 1.0
+
+; Agrega archivos fuente
+Source: main.go
+Source: utils.go
+
+; Configura las dependencias
+Dependencies:
+    - github.com/ejemplo/libreria
+            </code></pre>
+        </div>
+        <p>Para compilarlo, usa el comando:</p>
+        <div class="code-block">
+            <pre><code>
+aio.exe build "C:\ruta\a\MiAplicacion.aio"
+            </code></pre>
+        </div>
+
+        <h4>Archivos <code>.esp</code> e <code>.ing</code></h4>
+        <p>Estos archivos contienen datos para la traducción a español e inglés, respectivamente. El ícono de cada archivo está asociado a la función de **procesamiento**.</p>
+        <div class="code-block">
+            <pre><code>
+; Ejemplo de un archivo .esp
+welcome_message=Bienvenido a AIO
+error_message=Ha ocurrido un error
+            </code></pre>
+        </div>
+        <p>Para procesar el archivo, usa el comando:</p>
+        <div class="code-block">
+            <pre><code>
+aio.exe process "C:\ruta\a\textos_espanol.esp"
+            </code></pre>
+        </div>
+
+        <h4>Archivos <code>.meta</code></h4>
+        <p>Estos archivos almacenan metadatos para tu proyecto, como información de autor o versión. Su ícono de archivo está asociado a la función de **procesamiento**.</p>
+        <div class="code-block">
+            <pre><code>
+; Ejemplo de un archivo .meta
+Author: Juan Perez
+Date: 2024-08-17
+Description: Herramienta de línea de comandos para proyectos AIO.
+            </code></pre>
+        </div>
+
+        <h4>Archivos <code>.crea</code>, <code>.go</code> y <code>.rs</code></h4>
+        <p>Estos son los archivos de código fuente que se usarán en tu proyecto. Los íconos se asocian a la función de **procesamiento**.</p>
+        <div class="code-block">
+            <pre><code>
+// Ejemplo de un archivo .crea
+function init_project() {
+    // Código para inicializar un nuevo proyecto
+}
+            </code></pre>
+        </div>
     </div>
 
     <script src="script.js"></script>
